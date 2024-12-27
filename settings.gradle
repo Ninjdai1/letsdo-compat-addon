@@ -7,7 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'letsdoaddoncompat'
+rootProject.name = 'letsdocompat'
 
 include 'common'
 include 'fabric'

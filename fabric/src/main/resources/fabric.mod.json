@@ -1,17 +1,18 @@
 {
   "schemaVersion": 1,
-  "id": "letsdoaddoncompat",
+  "id": "letsdocompat",
   "version": "${version}",
   "name": "[Let's Do Addon] Compat",
-  "description": "A Loup Garou UHC plugin",
+  "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Ninjdai"
+    "Me!"
   ],
   "contact": {
-    "homepage": ""
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
-  "license": "GPL-3.0",
-  "icon": "assets/letsdoaddoncompat/icon.png",
+  "license": "CC0-1.0",
+  "icon": "assets/letsdocompat/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -22,7 +23,7 @@
     ]
   },
   "mixins": [
-    "letsdoaddoncompat.mixins.json"
+    "letsdocompat.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.16.9",

@@ -1,33 +1,33 @@
 modLoader = "javafml"
 loaderVersion = "[47,)"
 #issueTrackerURL = ""
-license = "GNU GPL 3.0"
+license = "Insert License Here"
 
 [[mods]]
-modId = "letsdoaddoncompat"
+modId = "letsdocompat"
 version = "${version}"
 displayName = "[Let's Do Addon] Compat"
-authors = "Ninjdai"
+authors = "Me!"
 description = '''
-A Loup Garou UHC plugin
+This is an example description! Tell everyone what your mod is about!
 '''
 #logoFile = ""
 
-[[dependencies.letsdoaddoncompat]]
+[[dependencies.letsdocompat]]
 modId = "forge"
 mandatory = true
 versionRange = "[47,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.letsdoaddoncompat]]
+[[dependencies.letsdocompat]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.20.1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.letsdoaddoncompat]]
+[[dependencies.letsdocompat]]
 modId = "architectury"
 mandatory = true
 versionRange = "[9.2.14,)"

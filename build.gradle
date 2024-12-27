@@ -19,42 +19,16 @@ subprojects {
     apply plugin: 'maven-publish'
 
     base {
+        // Set up a suffixed format for the mod jar names, e.g. `example-fabric`.
         archivesName = "$rootProject.archives_name-$project.name"
     }
 
     repositories {
-        exclusiveContent {
-            forRepository {
-                maven {
-                    name = "Modrinth"
-                    url = "https://api.modrinth.com/maven"
-                }
-            }
-            filter {
-                includeGroup "maven.modrinth"
-            }
-        }
-        maven {
-            name = "Terraformers maven"
-            url = "https://maven.terraformersmc.com"
-            description = "terraform wood api, trinkets"
-        }
-        maven {
-            name = "Jitpack"
-            url = "https://jitpack.io/"
-            description = "Fabric ASM"
-        }
-        maven {
-            url = "https://mvn.devos.one/releases/"
-            description = "Porting Lib"
-        }
-        maven { url = "https://maven.shedaniel.me/" } // REI and deps
-        maven { url = "https://maven.terraformersmc.com/" } // Mod Menu, EMI
-        maven { // Reach Entity Attributes
-            url = "https://maven.jamieswhiteshirt.com/libs-release"
-            content { includeGroup("com.jamieswhiteshirt") }
-        }
-        mavenCentral() // Mixin Extras
+
+    }
+
+    loom {
+        silentMojangMappingsLicense()
     }
 
     dependencies {
