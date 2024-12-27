@@ -1,0 +1,68 @@
+plugins {
+    id 'com.github.johnrengelman.shadow'
+}
+
+architectury {
+    platformSetupLoomIde()
+    fabric()
+}
+
+configurations {
+    common {
+        canBeResolved = true
+        canBeConsumed = false
+    }
+    compileClasspath.extendsFrom common
+    runtimeClasspath.extendsFrom common
+    developmentFabric.extendsFrom common
+
+    // Files in this configuration will be bundled into your mod using the Shadow plugin.
+    // Don't use the `shadow` configuration from the plugin itself as it's meant for excluding files.
+    shadowBundle {
+        canBeResolved = true
+        canBeConsumed = false
+    }
+}
+
+dependencies {
+    modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
+
+    modImplementation "net.fabricmc.fabric-api:fabric-api:$rootProject.fabric_api_version"
+
+    modImplementation "dev.architectury:architectury-fabric:$rootProject.architectury_api_version"
+
+    modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:${rootProject.terraform_wood_api_version}"
+    modImplementation "maven.modrinth:do-api:${rootProject.doapi_version}-fabric"
+
+    modImplementation "maven.modrinth:farmers-delight-refabricated:${rootProject.farmers_delight_refab_version}"
+    modImplementation "maven.modrinth:lets-do-farm-charm:${rootProject.farm_and_charm_version}-fabric"
+
+    modLocalRuntime("com.github.Chocohead:Fabric-ASM:${rootProject.fabric_asm_version}") {
+        exclude (group: "net.fabricmc.fabric-api")
+    }
+    for (String module in port_lib_modules.split(",")) {
+        modLocalRuntime("io.github.fabricators_of_create.Porting-Lib:$module:$port_lib_version")
+    }
+
+    modLocalRuntime("blue.endless:jankson:1.2.1")
+
+    common(project(path: ':common', configuration: 'namedElements')) { transitive false }
+    shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
+}
+
+processResources {
+    inputs.property 'version', project.version
+
+    filesMatching('fabric.mod.json') {
+        expand version: project.version
+    }
+}
+
+shadowJar {
+    configurations = [project.configurations.shadowBundle]
+    archiveClassifier = 'dev-shadow'
+}
+
+remapJar {
+    input.set shadowJar.archiveFile
+}

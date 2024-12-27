@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "dev.ninjdai.letsdocompat.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "RecipeManagerMixin",
+    "CookingPotRecipeAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
