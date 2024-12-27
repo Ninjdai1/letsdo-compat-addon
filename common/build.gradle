@@ -15,3 +15,18 @@ dependencies {
     modImplementation "maven.modrinth:farmers-delight:${rootProject.farmers_delight_version}"
 
 }
+
+sourceSets {
+    main {
+        // Platform specific generated files
+        resources {
+            srcDirs += [
+                    'src/main/generated'
+            ]
+            exclude ".cache/**"
+            exclude "**/.fabric"
+            exclude "**/.neoforge"
+
+        }
+    }
+}
