@@ -1,0 +1,20 @@
+on: 
+  - push
+  - pull_request
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'gradle'
+      - run: ./gradlew build --no-daemon
+      - uses: actions/upload-artifact@v4
+        with:
+          name: letsdocompat-devbuild
+          path: |
+            fabric/build/libs/*
+            forge/build/libs/*
