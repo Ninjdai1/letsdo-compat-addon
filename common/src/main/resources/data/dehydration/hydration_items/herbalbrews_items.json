@@ -1,0 +1,27 @@
+{
+    "1": {
+        "replace": false,
+        "items": [
+            "herbalbrews:coffee",
+            "herbalbrews:milk_coffee"
+        ]
+    },
+    "2": {
+        "replace": false,
+        "items": [
+            "herbalbrews:green_tea",
+            "herbalbrews:black_tea",
+            "herbalbrews:hibiscus_tea",
+            "herbalbrews:lavender_tea",
+            "herbalbrews:yerba_mate_tea",
+            "herbalbrews:rooibos_tea",
+            "herbalbrews:oolong_tea",
+            "herbalbrews:armor_flask",
+            "herbalbrews:armor_flask_big",
+            "herbalbrews:damage_flask",
+            "herbalbrews:damage_flask_big",
+            "herbalbrews:feral_flask",
+            "herbalbrews:feral_flask_big"
+        ]
+    }
+}

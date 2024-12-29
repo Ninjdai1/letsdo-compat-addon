@@ -1,0 +1,29 @@
+{
+    "1": {
+        "replace": false,
+        "items": [
+            "farm_and_charm:tomato",
+            "farm_and_charm:farmer_salad"
+        ]
+    },
+    "2": {
+        "replace": false,
+        "items": [
+            "farm_and_charm:strawberry_tea",
+            "farm_and_charm:nettle_tea",
+            "farm_and_charm:ribwort_tea",
+            "farm_and_charm:strawberry_tea_cup",
+            "farm_and_charm:nettle_tea_cup",
+            "farm_and_charm:ribwort_tea_cup"
+        ]
+    },
+    "3": {
+        "replace": false,
+        "items": [
+            "farm_and_charm:simple_tomato_soup",
+            "farm_and_charm:barley_soup",
+            "farm_and_charm:onion_soup",
+            "farm_and_charm:potato_soup"
+        ]
+    }
+}

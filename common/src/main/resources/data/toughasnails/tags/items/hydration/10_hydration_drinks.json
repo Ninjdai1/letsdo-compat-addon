@@ -1,0 +1,97 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "required": false,
+            "id": "beachparty:coconut_open"
+        },
+        {
+            "required": false,
+            "id": "beachparty:honey_cocktail"
+        },
+        {
+            "required": false,
+            "id": "beachparty:sweetberry_milkshake"
+        },
+        {
+            "required": false,
+            "id": "beachparty:coconut_milkshake"
+        },
+        {
+            "required": false,
+            "id": "beachparty:chocolate_milkshake"
+        },
+        {
+            "required": false,
+            "id": "beachparty:sweetberry_icecream"
+        },
+        {
+            "required": false,
+            "id": "beachparty:coconut_icecream"
+        },
+        {
+            "required": false,
+            "id": "beachparty:chocolate_icecream"
+        },
+        {
+            "required": false,
+            "id": "beachparty:icecream_coconut"
+        },
+        {
+            "required": false,
+            "id": "beachparty:icecream_cactus"
+        },
+        {
+            "required": false,
+            "id": "beachparty:icecream_chocolate"
+        },
+        {
+            "required": false,
+            "id": "beachparty:icecream_sweetberries"
+        },
+        {
+            "required": false,
+            "id": "beachparty:icecream_melon"
+        },
+        {
+            "required": false,
+            "id": "candlelight:beetroot_salad"
+        },
+        {
+            "required": false,
+            "id": "candlelight:salad"
+        },
+        {
+            "required": false,
+            "id": "candlelight:mozzarella"
+        },
+        {
+            "required": false,
+            "id": "candlelight:fresh_garden_salad"
+        },
+        {
+            "required": false,
+            "id": "candlelight:tomato_mozzarella_salad"
+        },
+        {
+            "required": false,
+            "id": "cornexpansion:corn_syrup"
+        },
+        {
+            "required": false,
+            "id": "farm_and_charm:tomato"
+        },
+        {
+            "required": false,
+            "id": "farm_and_charm:farmer_salad"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:coffee"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:milk_coffee"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "required": false,
+            "id": "brewery:beer_wheat"
+        },
+        {
+            "required": false,
+            "id": "brewery:beer_barley"
+        },
+        {
+            "required": false,
+            "id": "brewery:beer_hops"
+        },
+        {
+            "required": false,
+            "id": "brewery:beer_nettle"
+        },
+        {
+            "required": false,
+            "id": "brewery:beer_oat"
+        },
+        {
+            "required": false,
+            "id": "brewery:beer_haley"
+        },
+        {
+            "required": false,
+            "id": "candlelight:tomato_soup"
+        },
+        {
+            "required": false,
+            "id": "candlelight:mushroom_soup"
+        },
+        {
+            "required": false,
+            "id": "farm_and_charm:simple_tomato_soup"
+        },
+        {
+            "required": false,
+            "id": "farm_and_charm:barley_soup"
+        },
+        {
+            "required": false,
+            "id": "farm_and_charm:onion_soup"
+        },
+        {
+            "required": false,
+            "id": "farm_and_charm:potato_soup"
+        }
+    ]
+}

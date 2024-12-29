@@ -1,0 +1,169 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "required": false,
+            "id": "beachparty:coconut_cocktail"
+        },
+        {
+            "required": false,
+            "id": "beachparty:sweetberries_cocktail"
+        },
+        {
+            "required": false,
+            "id": "beachparty:cocoa_cocktail"
+        },
+        {
+            "required": false,
+            "id": "beachparty:pumpkin_cocktail"
+        },
+        {
+            "required": false,
+            "id": "beachparty:melon_cocktail"
+        },
+        {
+            "required": false,
+            "id": "brewery:whiskey"
+        },
+        {
+            "required": false,
+            "id": "brewery:whiskey_jojannik"
+        },
+        {
+            "required": false,
+            "id": "brewery:whiskey_lilitusinglemalt"
+        },
+        {
+            "required": false,
+            "id": "brewery:whiskey_cristelwalker"
+        },
+        {
+            "required": false,
+            "id": "brewery:whiskey_maggoallan"
+        },
+        {
+            "required": false,
+            "id": "brewery:whiskey_carrasconlabel"
+        },
+        {
+            "required": false,
+            "id": "brewery:whiskey_ak"
+        },
+        {
+            "required": false,
+            "id": "brewery:whiskey_highland_hearth"
+        },
+        {
+            "required": false,
+            "id": "brewery:whiskey_smokey_reverie"
+        },
+        {
+            "required": false,
+            "id": "brewery:whiskey_jamesons_malt"
+        },
+        {
+            "required": false,
+            "id": "farm_and_charm:strawberry_tea"
+        },
+        {
+            "required": false,
+            "id": "farm_and_charm:nettle_tea"
+        },
+        {
+            "required": false,
+            "id": "farm_and_charm:ribwort_tea"
+        },
+        {
+            "required": false,
+            "id": "farm_and_charm:strawberry_tea_cup"
+        },
+        {
+            "required": false,
+            "id": "farm_and_charm:nettle_tea_cup"
+        },
+        {
+            "required": false,
+            "id": "farm_and_charm:ribwort_tea_cup"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:green_tea"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:black_tea"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:hibiscus_tea"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:lavender_tea"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:yerba_mate_tea"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:rooibos_tea"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:oolong_tea"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:armor_flask"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:armor_flask_big"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:damage_flask"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:damage_flask_big"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:feral_flask"
+        },
+        {
+            "required": false,
+            "id": "herbalbrews:feral_flask_big"
+        },
+        {
+            "required": false,
+            "id": "meadow:wooden_milk_bucket"
+        },
+        {
+            "required": false,
+            "id": "meadow:wooden_sheep_milk_bucket"
+        },
+        {
+            "required": false,
+            "id": "meadow:wooden_buffalo_milk_bucket"
+        },
+        {
+            "required": false,
+            "id": "meadow:wooden_goat_milk_bucket"
+        },
+        {
+            "required": false,
+            "id": "meadow:wooden_warped_milk_bucket"
+        },
+        {
+            "required": false,
+            "id": "meadow:wooden_grain_milk_bucket"
+        },
+        {
+            "required": false,
+            "id": "meadow:wooden_amethyst_milk_bucket"
+        }
+    ]
+}

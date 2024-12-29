@@ -1,0 +1,36 @@
+{
+    "1": {
+        "replace": false,
+        "items": [
+            "beachparty:coconut_open",
+            "beachparty:honey_cocktail",
+            "beachparty:sweetberry_milkshake",
+            "beachparty:coconut_milkshake",
+            "beachparty:chocolate_milkshake",
+            "beachparty:sweetberry_icecream",
+            "beachparty:coconut_icecream",
+            "beachparty:chocolate_icecream",
+            "beachparty:icecream_coconut",
+            "beachparty:icecream_cactus",
+            "beachparty:icecream_chocolate",
+            "beachparty:icecream_sweetberries",
+            "beachparty:icecream_melon"
+        ]
+    },
+    "2": {
+        "replace": false,
+        "items": [
+            "beachparty:coconut_cocktail",
+            "beachparty:sweetberries_cocktail",
+            "beachparty:cocoa_cocktail",
+            "beachparty:pumpkin_cocktail",
+            "beachparty:melon_cocktail"
+        ]
+    },
+    "5": {
+        "replace": false,
+        "items": [
+            "beachparty:refreshing_drink"
+        ]
+    }
+}

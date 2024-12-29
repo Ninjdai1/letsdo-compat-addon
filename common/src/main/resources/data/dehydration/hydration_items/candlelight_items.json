@@ -1,0 +1,19 @@
+{
+    "1": {
+        "replace": false,
+        "items": [
+            "candlelight:beetroot_salad",
+            "candlelight:salad",
+            "candlelight:mozzarella",
+            "candlelight:fresh_garden_salad",
+            "candlelight:tomato_mozzarella_salad"
+        ]
+    },
+    "3": {
+        "replace": false,
+        "items": [
+            "candlelight:tomato_soup",
+            "candlelight:mushroom_soup"
+        ]
+    }
+}

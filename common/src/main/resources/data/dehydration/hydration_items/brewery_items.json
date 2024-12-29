@@ -1,0 +1,28 @@
+{
+    "2": {
+        "replace": false,
+        "items": [
+            "brewery:whiskey",
+            "brewery:whiskey_jojannik",
+            "brewery:whiskey_lilitusinglemalt",
+            "brewery:whiskey_cristelwalker",
+            "brewery:whiskey_maggoallan",
+            "brewery:whiskey_carrasconlabel",
+            "brewery:whiskey_ak",
+            "brewery:whiskey_highland_hearth",
+            "brewery:whiskey_smokey_reverie",
+            "brewery:whiskey_jamesons_malt"
+        ]
+    },
+    "3": {
+        "replace": false,
+        "items": [
+            "brewery:beer_wheat",
+            "brewery:beer_barley",
+            "brewery:beer_hops",
+            "brewery:beer_nettle",
+            "brewery:beer_oat",
+            "brewery:beer_haley"
+        ]
+    }
+}
