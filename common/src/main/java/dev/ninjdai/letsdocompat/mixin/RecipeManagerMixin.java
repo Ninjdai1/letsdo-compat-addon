@@ -27,10 +27,9 @@ public abstract class RecipeManagerMixin {
         for (Map.Entry<ResourceLocation, JsonElement> entry : map.entrySet()) {
             ResourceLocation resourceLocation = entry.getKey();
             JsonObject jsonRecipe = entry.getValue().getAsJsonObject();
+            if (!jsonRecipe.has("type")) continue;
             String recipeType = jsonRecipe.get("type").getAsString();
             if (recipeType.equals("farm_and_charm:pot_cooking")) {
-                Compat.LOGGER.info("Located F&C Pot cooking recipe {}: {}", resourceLocation, jsonRecipe);
-
                 if (DoAddonExpectPlatform.isModLoaded("farmersdelight")) {
                     JsonObject FDCookingPotRecipe = new JsonObject();
                     FDCookingPotRecipe.add("type", new JsonPrimitive("farmersdelight:cooking"));
@@ -39,12 +38,9 @@ public abstract class RecipeManagerMixin {
                     FDCookingPotRecipe.add("container", jsonRecipe.get("container"));
                     FDCookingPotRecipe.add("result", jsonRecipe.get("result"));
                     ResourceLocation id = new ResourceLocation(Compat.MOD_ID, "farm_and_charm/" + resourceLocation.getPath());
-                    Compat.LOGGER.info("FD recipe: {} {}", id, FDCookingPotRecipe);
                     tMap.put(id, FDCookingPotRecipe);
                 }
             } else if (recipeType.equals("farmersdelight:cooking")) {
-                Compat.LOGGER.info("Located FD Pot cooking recipe {}: {}", resourceLocation, jsonRecipe);
-
                 if (DoAddonExpectPlatform.isModLoaded("farm_and_charm")) {
                     JsonObject letsDoCookingPotRecipe = new JsonObject();
                     letsDoCookingPotRecipe.add("type", new JsonPrimitive("farm_and_charm:pot_cooking"));
@@ -55,6 +51,7 @@ public abstract class RecipeManagerMixin {
                             Item i = BuiltInRegistries.ITEM.get(new ResourceLocation(jsonRecipe.get("result").getAsJsonObject().get("item").getAsString()));
                             if (i.hasCraftingRemainingItem()) {
                                 JsonObject container = new JsonObject();
+                                container.add("required", new JsonPrimitive(true));
                                 container.add("item", new JsonPrimitive(i.getCraftingRemainingItem().arch$registryName().toString()));
                                 letsDoCookingPotRecipe.add("container", container);
                             } else continue;
@@ -65,11 +62,11 @@ public abstract class RecipeManagerMixin {
                     }
                     letsDoCookingPotRecipe.add("result", jsonRecipe.get("result"));
                     ResourceLocation id = new ResourceLocation(Compat.MOD_ID, "farmersdelight/" + resourceLocation.getPath());
-                    Compat.LOGGER.info("Let's Do recipe: {} {}", id, letsDoCookingPotRecipe);
                     tMap.put(id, letsDoCookingPotRecipe);
                 }
             }
         }
         map.putAll(tMap);
+        Compat.LOGGER.info("Added {} compatibility recipes !", tMap.size());
     }
 }
