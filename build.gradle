@@ -75,7 +75,7 @@ publishMods {
     def optionsCurseforge = curseforgeOptions {
         accessToken = providers.environmentVariable("CURSEFORGE_API_KEY")
         minecraftVersions.add("1.20.1")
-        projectId = "1038740"
+        projectId = "992333"
         requires {
             slug = "architectury-api"
         }
@@ -86,7 +86,7 @@ publishMods {
 
     def optionsModrinth = modrinthOptions {
         accessToken = providers.environmentVariable("MODRINTH_API_KEY")
-        projectId = "20p2kirx"
+        projectId = "FNi5IMiX"
         minecraftVersions.add("1.20.1")
         requires {
             slug = "architectury-api"
