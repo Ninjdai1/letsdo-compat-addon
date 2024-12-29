@@ -3,15 +3,15 @@
   "id": "letsdocompat",
   "version": "${version}",
   "name": "[Let's Do Addon] Compat",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Adds compatibility between Let's Do and a plethora of mods sos you don't have to !",
   "authors": [
-    "Me!"
+    "Ninjdai"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
+    "homepage": "https://modrinth.com/mod/lets-do-addon-compat",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
-  "license": "CC0-1.0",
+  "license": "GPLv3",
   "icon": "assets/letsdocompat/icon.png",
   "environment": "*",
   "entrypoints": {
@@ -33,6 +33,13 @@
     "fabric-api": "*"
   },
   "suggests": {
-    "another-mod": "*"
+    "farm_and_charm": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.com/invite/Vddst9txP8"
+      }
+    }
   }
 }

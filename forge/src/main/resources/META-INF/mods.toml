@@ -1,17 +1,17 @@
 modLoader = "javafml"
 loaderVersion = "[47,)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "GPLv3"
 
 [[mods]]
 modId = "letsdocompat"
 version = "${version}"
 displayName = "[Let's Do Addon] Compat"
-authors = "Me!"
+authors = "Ninjdai"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Adds compatibility between Let's Do and a plethora of mods sos you don't have to !
 '''
-#logoFile = ""
+logoFile = "assets/cornexpansion/icon.png"
 
 [[dependencies.letsdocompat]]
 modId = "forge"
@@ -31,5 +31,12 @@ side = "BOTH"
 modId = "architectury"
 mandatory = true
 versionRange = "[9.2.14,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.letsdocompat]]
+modId = "farm_and_charm"
+mandatory = false
+versionRange = "[0.0.0,)"
 ordering = "AFTER"
 side = "BOTH"
