@@ -2,6 +2,7 @@ package dev.ninjdai.letsdocompat.forge;
 
 import dev.ninjdai.letsdocompat.Compat;
 import dev.architectury.platform.forge.EventBuses;
+import dev.ninjdai.letsdocompat.forge.compat.LSOCompat;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -13,5 +14,7 @@ public final class CompatForge {
 
         // Run our common setup.
         Compat.init();
+
+        LSOCompat.init();
     }
 }

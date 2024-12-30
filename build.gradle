@@ -25,7 +25,16 @@ subprojects {
     }
 
     repositories {
-
+        exclusiveContent {
+            forRepository {
+                maven {
+                    url "https://cursemaven.com"
+                }
+            }
+            filter {
+                includeGroup "curse.maven"
+            }
+        }
     }
 
     loom {
