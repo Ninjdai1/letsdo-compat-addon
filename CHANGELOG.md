@@ -4,3 +4,4 @@
 
 Added:
 * Legendary Survival Overhaul compatibility
+* Thirst was Taken compatibility
