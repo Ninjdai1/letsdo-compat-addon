@@ -11,3 +11,10 @@ Compatibility currently (as of version 2.1.0) includes:
 
 Plans:
 * Any of YOUR suggestions ! Feel free to drop in the discord or github issues
+
+The mod also features a light API for developers to add compatibility with all supported thirst mods at once, in a loader-agnostic way (you can use it forge-only, fabric-only or with both loader supported):
+```java
+ThirstCompatHelper#registerDrinkThirst(String itemName, int thirst, float quench);
+// OR
+ThirstCompatHelper#registerFoodThirst(String itemName, int thirst, float quench);
+```
