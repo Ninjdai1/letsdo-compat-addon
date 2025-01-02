@@ -8,4 +8,9 @@ public class DoAddonExpectPlatform {
     public static boolean isModLoaded(String modid) {
         return false;
     }
+
+    @ExpectPlatform
+    public static void addItemCompat(String itemName, Number[] values, ThirstCompatHelper.ItemType itemType) {
+
+    }
 }
