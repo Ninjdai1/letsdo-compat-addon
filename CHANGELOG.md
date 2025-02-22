@@ -3,5 +3,4 @@
 ### Changelog:
 
 Added:
-* Legendary Survival Overhaul compatibility
-* Thirst was Taken compatibility
+* Brewin' & Chewin' compatibility
