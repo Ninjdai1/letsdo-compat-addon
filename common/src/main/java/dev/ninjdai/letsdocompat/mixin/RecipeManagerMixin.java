@@ -3,9 +3,7 @@ package dev.ninjdai.letsdocompat.mixin;
 import com.google.gson.*;
 import dev.ninjdai.letsdocompat.Compat;
 import dev.ninjdai.letsdocompat.DoAddonExpectPlatform;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.util.profiling.ProfilerFiller;
@@ -35,7 +33,10 @@ public abstract class RecipeManagerMixin {
                     FDCookingPotRecipe.add("type", new JsonPrimitive("farmersdelight:cooking"));
                     FDCookingPotRecipe.add("recipe_book_tab", new JsonPrimitive("meals"));
                     FDCookingPotRecipe.add("ingredients", jsonRecipe.getAsJsonArray("ingredients"));
-                    FDCookingPotRecipe.add("container", jsonRecipe.get("container"));
+                    JsonObject ldContainer = jsonRecipe.getAsJsonObject("container");
+                    if (!ldContainer.get("required").getAsBoolean()) {
+                        FDCookingPotRecipe.add("container", ldContainer.get("item"));
+                    }
                     FDCookingPotRecipe.add("result", jsonRecipe.get("result"));
                     ResourceLocation id = new ResourceLocation(Compat.MOD_ID, "farm_and_charm/" + resourceLocation.getPath());
                     tMap.put(id, FDCookingPotRecipe);
@@ -45,14 +46,21 @@ public abstract class RecipeManagerMixin {
                     JsonObject letsDoCookingPotRecipe = new JsonObject();
                     letsDoCookingPotRecipe.add("type", new JsonPrimitive("farm_and_charm:pot_cooking"));
                     letsDoCookingPotRecipe.add("ingredients", jsonRecipe.getAsJsonArray("ingredients"));
-                    if (jsonRecipe.has("container")) letsDoCookingPotRecipe.add("container", jsonRecipe.get("container"));
+                    if (jsonRecipe.has("container")) {
+                        JsonObject containerObject = new JsonObject();
+                        containerObject.add("required", new JsonPrimitive(true));
+                        containerObject.add("item", jsonRecipe.get("container"));
+                        letsDoCookingPotRecipe.add("container", containerObject);
+                    }
                     else {
                         try {
                             Item i = BuiltInRegistries.ITEM.get(new ResourceLocation(jsonRecipe.get("result").getAsJsonObject().get("item").getAsString()));
                             if (i.hasCraftingRemainingItem()) {
                                 JsonObject container = new JsonObject();
                                 container.add("required", new JsonPrimitive(true));
-                                container.add("item", new JsonPrimitive(i.getCraftingRemainingItem().arch$registryName().toString()));
+                                JsonObject itemObject = new JsonObject();
+                                itemObject.add("item", new JsonPrimitive(i.getCraftingRemainingItem().arch$registryName().toString()));
+                                container.add("item", itemObject);
                                 letsDoCookingPotRecipe.add("container", container);
                             } else continue;
                         } catch (Exception e) {
@@ -61,6 +69,7 @@ public abstract class RecipeManagerMixin {
                         }
                     }
                     letsDoCookingPotRecipe.add("result", jsonRecipe.get("result"));
+                    letsDoCookingPotRecipe.add("requiresLearning", new JsonPrimitive(false));
                     ResourceLocation id = new ResourceLocation(Compat.MOD_ID, "farmersdelight/" + resourceLocation.getPath());
                     tMap.put(id, letsDoCookingPotRecipe);
                 }

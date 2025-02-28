@@ -9,7 +9,7 @@
   ],
   "contact": {
     "homepage": "https://modrinth.com/mod/lets-do-addon-compat",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/Ninjdai1/letsdo-compat-addon"
   },
   "license": "GPLv3",
   "icon": "assets/letsdocompat/icon.png",
@@ -33,7 +33,7 @@
     "fabric-api": "*"
   },
   "suggests": {
-    "farm_and_charm": "*"
+    "farm_and_charm": ">=1.0.6"
   },
   "custom": {
     "modmenu": {
