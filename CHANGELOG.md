@@ -6,3 +6,4 @@ Added:
 * Legendary Survival Overhaul compatibility
 * Thirst was Taken compatibility
 * Brewin' & Chewin' compatibility
+* Updated Farm&Charm compatibility to 1.0.6
