@@ -2,15 +2,11 @@ utils/output/
 
 # User-specific stuff
 .idea/
-
-*.iml
-*.ipr
-*.iws
-
-# IntelliJ
-out/
-# mpeltonen/sbt-idea plugin
-.idea_modules/
+bin/
+.settings/
+.classpath
+.project
+.factorypath
 
 # JIRA plugin
 atlassian-ide-plugin.xml

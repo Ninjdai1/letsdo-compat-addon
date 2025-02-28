@@ -33,9 +33,13 @@ public abstract class RecipeManagerMixin {
                     FDCookingPotRecipe.add("type", new JsonPrimitive("farmersdelight:cooking"));
                     FDCookingPotRecipe.add("recipe_book_tab", new JsonPrimitive("meals"));
                     FDCookingPotRecipe.add("ingredients", jsonRecipe.getAsJsonArray("ingredients"));
-                    JsonObject ldContainer = jsonRecipe.getAsJsonObject("container");
-                    if (!ldContainer.get("required").getAsBoolean()) {
-                        FDCookingPotRecipe.add("container", ldContainer.get("item"));
+                    try {
+                        JsonObject ldContainer = jsonRecipe.getAsJsonObject("container");
+                        if (!ldContainer.get("required").getAsBoolean()) {
+                            FDCookingPotRecipe.add("container", ldContainer.get("item"));
+                        }
+                    } catch(Exception e) {
+                        Compat.LOGGER.error("Error while reading recipe container");
                     }
                     FDCookingPotRecipe.add("result", jsonRecipe.get("result"));
                     ResourceLocation id = new ResourceLocation(Compat.MOD_ID, "farm_and_charm/" + resourceLocation.getPath());
