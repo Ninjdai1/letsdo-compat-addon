@@ -1,5 +1,6 @@
 package dev.ninjdai.letsdocompat;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -21,6 +22,7 @@ public final class RecipeJsonUtil {
             Compat.LOGGER.error("Error while reading recipe container");
         }
         FDCookingPotRecipe.add("result", jsonRecipe.get("result"));
+
         return FDCookingPotRecipe;
     }
 
@@ -52,6 +54,19 @@ public final class RecipeJsonUtil {
         }
         letsDoCookingPotRecipe.add("result", jsonRecipe.get("result"));
         letsDoCookingPotRecipe.add("requiresLearning", new JsonPrimitive(false));
+
         return letsDoCookingPotRecipe;
+    }
+
+    public static JsonObject generateCreateMixerFromFDBowl(JsonObject jsonRecipe) {
+        JsonObject createMixerRecipe = new JsonObject();
+        createMixerRecipe.add("type", new JsonPrimitive("create:mixing"));
+        createMixerRecipe.add("ingredients", jsonRecipe.getAsJsonArray("ingredients"));
+
+        JsonArray resultsArray = new JsonArray();
+        resultsArray.add(jsonRecipe.get("result"));
+        createMixerRecipe.add("results", resultsArray);
+
+        return createMixerRecipe;
     }
 }
