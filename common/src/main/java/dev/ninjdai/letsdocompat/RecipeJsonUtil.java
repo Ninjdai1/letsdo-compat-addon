@@ -77,6 +77,22 @@ public final class RecipeJsonUtil {
         return createMixerRecipe;
     };
 
+    public static final RecipeConvertor generateCreateMillingFromFDMincer = (jsonRecipe) -> {
+        JsonObject createMillingRecipe = new JsonObject();
+        createMillingRecipe.add("type", new JsonPrimitive("create:milling"));
+        createMillingRecipe.add("processingTime", new JsonPrimitive(90));
+
+        JsonArray ingredientsArray = new JsonArray();
+        ingredientsArray.add(jsonRecipe.get("ingredient"));
+        createMillingRecipe.add("ingredients", ingredientsArray);
+
+        JsonArray resultsArray = new JsonArray();
+        resultsArray.add(jsonRecipe.get("result"));
+        createMillingRecipe.add("results", resultsArray);
+
+        return createMillingRecipe;
+    };
+
     static {
         RECIPE_CONVERSION_MAP.put("farm_and_charm:pot_cooking", List.of(
                 new Tuple<>("farmersdelight", RecipeJsonUtil.generateFDCookingPotFromLDCookingPot)
@@ -86,6 +102,9 @@ public final class RecipeJsonUtil {
         ));
         RECIPE_CONVERSION_MAP.put("farm_and_charm:crafting_bowl", List.of(
                 new Tuple<>("create", RecipeJsonUtil.generateCreateMixerFromFDBowl)
+        ));
+        RECIPE_CONVERSION_MAP.put("farm_and_charm:mincer", List.of(
+                new Tuple<>("create", RecipeJsonUtil.generateCreateMillingFromFDMincer)
         ));
     }
 
