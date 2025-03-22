@@ -8,6 +8,7 @@ Compatibility currently (as of version 2.1.0) includes:
 * Farmer's Delight / Farmer's Delight Refabricated
 * All Farmer's Delight addons
 * Thirst mods compatibility (Legendary Survival Overhaul, Thirst was Taken, Dehydration...)
+* Various Create Millstone and Mixer recipes
 
 Plans:
 * Any of YOUR suggestions ! Feel free to drop in the discord or github issues
