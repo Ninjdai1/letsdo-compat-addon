@@ -3,7 +3,8 @@
 ### Changelog:
 
 Added:
-* Legendary Survival Overhaul compatibility
-* Thirst was Taken compatibility
-* Brewin' & Chewin' compatibility
-* Updated Farm&Charm compatibility to 1.0.6
+* Create Mixing and Milling recipes
+* `salad_ingredient` tags to F&C cabbage and lettuce
+
+Updated:
+* More robust and expandable system for recipe conversions
