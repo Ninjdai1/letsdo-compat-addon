@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "required": false,
+            "id": "farm_and_charm:lettuce"
+        }
+    ]
+}
