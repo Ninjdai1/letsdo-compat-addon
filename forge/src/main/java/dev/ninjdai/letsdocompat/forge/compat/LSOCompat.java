@@ -6,6 +6,7 @@ import sfiomn.legendarysurvivaloverhaul.config.json.JsonConfig;
 
 public class LSOCompat {
     public static void init() {
+        return;
         if (!DoAddonExpectPlatform.isModLoaded("legendarysurvivaloverhaul")) return;
 
         if (DoAddonExpectPlatform.isModLoaded("candlelight")) initCandlelight();
