@@ -7,13 +7,13 @@ import sfiomn.legendarysurvivaloverhaul.config.json.JsonConfig;
 public class LSOCompat {
     public static void init() {
         return;
-        if (!DoAddonExpectPlatform.isModLoaded("legendarysurvivaloverhaul")) return;
+        /*if (!DoAddonExpectPlatform.isModLoaded("legendarysurvivaloverhaul")) return;
 
         if (DoAddonExpectPlatform.isModLoaded("candlelight")) initCandlelight();
         if (DoAddonExpectPlatform.isModLoaded("farm_and_charm")) initFarmAndCharm();
         if (DoAddonExpectPlatform.isModLoaded("herbalbrews")) initHerbalBrews();
         if (DoAddonExpectPlatform.isModLoaded("meadow")) initMeadow();
-        if (DoAddonExpectPlatform.isModLoaded("wildernature")) initWilderNature();
+        if (DoAddonExpectPlatform.isModLoaded("wildernature")) initWilderNature();*/
     }
 
     private static void initCandlelight() {
