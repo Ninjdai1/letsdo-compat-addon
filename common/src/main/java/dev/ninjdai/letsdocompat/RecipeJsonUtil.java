@@ -22,7 +22,7 @@ public final class RecipeJsonUtil {
         FDCookingPotRecipe.add("ingredients", jsonRecipe.getAsJsonArray("ingredients"));
         try {
             JsonObject ldContainer = jsonRecipe.getAsJsonObject("container");
-            if (!ldContainer.get("required").getAsBoolean()) {
+            if (ldContainer.get("required").getAsBoolean()) {
                 FDCookingPotRecipe.add("container", ldContainer.get("item"));
             }
         } catch(Exception e) {
