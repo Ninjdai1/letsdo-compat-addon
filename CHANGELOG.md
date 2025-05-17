@@ -2,9 +2,8 @@
 `1.20.1` `Fabric & Forge`
 ### Changelog:
 
-Added:
-* Create Mixing and Milling recipes
-* `salad_ingredient` tags to F&C cabbage and lettuce
+Fixed:
+* Missing containers in farmer's delight recipes generated from let's do cooking pot recipes
 
-Updated:
-* More robust and expandable system for recipe conversions
+Changed:
+* Disabled LegendarySurvivalOverhaul compat as compatibility with let's do mods is now data-driven and included in the base mod
