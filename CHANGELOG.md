@@ -3,7 +3,4 @@
 ### Changelog:
 
 Fixed:
-* Missing containers in farmer's delight recipes generated from let's do cooking pot recipes
-
-Changed:
-* Disabled LegendarySurvivalOverhaul compat as compatibility with let's do mods is now data-driven and included in the base mod
+* Crash if LegendarySurvivalOverhaul was installed
