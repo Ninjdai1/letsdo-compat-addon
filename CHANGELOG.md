@@ -3,4 +3,4 @@
 ### Changelog:
 
 Fixed:
-* Crash if LegendarySurvivalOverhaul was installed
+* Broken salad_ingredients/cabbage tag
