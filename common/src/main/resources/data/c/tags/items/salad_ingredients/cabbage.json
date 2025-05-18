@@ -2,8 +2,8 @@
     "replace": false,
     "values": [
         {
-            "required": true,
-            "id": "farm_and_charm:cabbage"
+            "required": false,
+            "id": "#farm_and_charm:cabbage"
         }
     ]
 }
