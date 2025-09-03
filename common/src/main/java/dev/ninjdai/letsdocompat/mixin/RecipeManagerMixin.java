@@ -38,7 +38,7 @@ public abstract class RecipeManagerMixin {
 
                             tMap.put(
                                 //Example generated ResourceLocation: "letsdocompat:create/crafting_bowl/butter"
-                                new ResourceLocation(Compat.MOD_ID, modConvertorTuple.getA() + "/" + resourceLocation.getPath()),
+                                ResourceLocation.fromNamespaceAndPath(Compat.MOD_ID, modConvertorTuple.getA() + "/" + resourceLocation.getPath()),
                                 recipe
                             );
                         }
