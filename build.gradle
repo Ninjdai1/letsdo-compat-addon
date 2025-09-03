@@ -108,7 +108,6 @@ publishMods {
     curseforge("curseforgeFabric") {
         from optionsCurseforge
         modLoaders.add("fabric")
-        modLoaders.add("quilt")
         file = project(":fabric").tasks.named("remapJar").get().archiveFile
         displayName = "$mod_displayname ${rootProject.mod_version} Fabric"
         version = "${rootProject.mod_version}-fabric"
@@ -116,7 +115,6 @@ publishMods {
 
     curseforge("curseforgeForge") {
         from optionsCurseforge
-        modLoaders.add("forge")
         modLoaders.add("neoforge")
         file = project(":neoforge").tasks.named("remapJar").get().archiveFile
         displayName = "$mod_displayname ${rootProject.mod_version} NeoForge"
@@ -126,7 +124,6 @@ publishMods {
     modrinth("modrinthFabric") {
         from optionsModrinth
         modLoaders.add("fabric")
-        modLoaders.add("quilt")
         file = project(":fabric").tasks.named("remapJar").get().archiveFile
         displayName = "$mod_displayname ${rootProject.mod_version} Fabric"
         version = "${rootProject.mod_version}-fabric"
@@ -136,7 +133,6 @@ publishMods {
 
     modrinth("modrinthForge") {
         from optionsModrinth
-        modLoaders.add("forge")
         modLoaders.add("neoforge")
         file = project(":neoforge").tasks.named("remapJar").get().archiveFile
         displayName = "$mod_displayname ${rootProject.mod_version} NeoForge"

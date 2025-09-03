@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
+loaderVersion = "[4,)"
 #issueTrackerURL = ""
 license = "GPLv3"
 
@@ -14,16 +14,16 @@ Adds compatibility between Let's Do and a plethora of mods sos you don't have to
 logoFile = "assets/cornexpansion/icon.png"
 
 [[dependencies.letsdocompat]]
-modId = "forge"
-mandatory = true
-versionRange = "[47,)"
+modId = "neoforge"
+type = "required"
+versionRange = "[21.0,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.letsdocompat]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.20.1,)"
+versionRange = "[1.21,)"
 ordering = "NONE"
 side = "BOTH"
 
@@ -37,6 +37,6 @@ side = "BOTH"
 [[dependencies.letsdocompat]]
 modId = "farm_and_charm"
 mandatory = false
-versionRange = "[0.0.0,)"
+versionRange = "[1.1.6,)"
 ordering = "AFTER"
 side = "BOTH"
