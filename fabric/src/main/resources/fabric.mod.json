@@ -28,12 +28,12 @@
   "depends": {
     "fabricloader": ">=0.16.9",
     "minecraft": "~1.21.1",
-    "java": ">=17",
+    "java": ">=21",
     "architectury": ">=13.0.0",
     "fabric-api": "*"
   },
   "suggests": {
-    "farm_and_charm": ">=1.1.2"
+    "farm_and_charm": ">=1.1.6"
   },
   "custom": {
     "modmenu": {

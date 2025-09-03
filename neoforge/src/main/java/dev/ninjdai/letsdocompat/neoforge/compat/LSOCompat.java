@@ -1,6 +1,5 @@
-package dev.ninjdai.letsdocompat.forge.compat;
+package dev.ninjdai.letsdocompat.neoforge.compat;
 
-import dev.ninjdai.letsdocompat.DoAddonExpectPlatform;
 import sfiomn.legendarysurvivaloverhaul.api.temperature.TemporaryModifierGroupEnum;
 import sfiomn.legendarysurvivaloverhaul.config.json.JsonConfig;
 

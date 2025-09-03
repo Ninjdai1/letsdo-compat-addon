@@ -11,7 +11,10 @@ authors = "Ninjdai"
 description = '''
 Adds compatibility between Let's Do and a plethora of mods sos you don't have to !
 '''
-logoFile = "assets/cornexpansion/icon.png"
+logoFile = "assets/letsdocompat/icon.png"
+
+[[mixins]]
+config = "letsdocompat.mixins.json"
 
 [[dependencies.letsdocompat]]
 modId = "neoforge"

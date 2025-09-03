@@ -35,6 +35,17 @@ subprojects {
                 includeGroup "curse.maven"
             }
         }
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "Modrinth"
+                    url = "https://api.modrinth.com/maven"
+                }
+            }
+            filter {
+                includeGroup "maven.modrinth"
+            }
+        }
     }
 
     loom {
@@ -49,12 +60,12 @@ subprojects {
     java {
         withSourcesJar()
 
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     tasks.withType(JavaCompile).configureEach {
-        it.options.release = 17
+        it.options.release = 21
     }
 
     // Configure Maven publishing.
@@ -113,7 +124,7 @@ publishMods {
         version = "${rootProject.mod_version}-fabric"
     }
 
-    curseforge("curseforgeForge") {
+    curseforge("curseforgeNeoForge") {
         from optionsCurseforge
         modLoaders.add("neoforge")
         file = project(":neoforge").tasks.named("remapJar").get().archiveFile
@@ -131,7 +142,7 @@ publishMods {
         additionalFiles.from(project(":fabric").tasks.named("remapSourcesJar").get().archiveFile)
     }
 
-    modrinth("modrinthForge") {
+    modrinth("modrinthNeoForge") {
         from optionsModrinth
         modLoaders.add("neoforge")
         file = project(":neoforge").tasks.named("remapJar").get().archiveFile
