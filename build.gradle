@@ -118,9 +118,9 @@ publishMods {
         from optionsCurseforge
         modLoaders.add("forge")
         modLoaders.add("neoforge")
-        file = project(":forge").tasks.named("remapJar").get().archiveFile
-        displayName = "$mod_displayname ${rootProject.mod_version} Forge"
-        version = "${rootProject.mod_version}-forge"
+        file = project(":neoforge").tasks.named("remapJar").get().archiveFile
+        displayName = "$mod_displayname ${rootProject.mod_version} NeoForge"
+        version = "${rootProject.mod_version}-neoforge"
     }
 
     modrinth("modrinthFabric") {
@@ -138,10 +138,10 @@ publishMods {
         from optionsModrinth
         modLoaders.add("forge")
         modLoaders.add("neoforge")
-        file = project(":forge").tasks.named("remapJar").get().archiveFile
-        displayName = "$mod_displayname ${rootProject.mod_version} Forge"
-        version = "${rootProject.mod_version}-forge"
+        file = project(":neoforge").tasks.named("remapJar").get().archiveFile
+        displayName = "$mod_displayname ${rootProject.mod_version} NeoForge"
+        version = "${rootProject.mod_version}-neoforge"
 
-        additionalFiles.from(project(":forge").tasks.named("remapSourcesJar").get().archiveFile)
+        additionalFiles.from(project(":neoforge").tasks.named("remapSourcesJar").get().archiveFile)
     }
 }
