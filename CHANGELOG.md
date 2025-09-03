@@ -1,6 +1,5 @@
 # [Let's Do Addon] Compat `@VERSION@`
-`1.20.1` `Fabric & Forge`
+`1.21.1` `Fabric & Forge`
 ### Changelog:
 
-Fixed:
-* Broken salad_ingredients/cabbage tag
+Updated to 1.21.1 and farm&charm 1.1.6
