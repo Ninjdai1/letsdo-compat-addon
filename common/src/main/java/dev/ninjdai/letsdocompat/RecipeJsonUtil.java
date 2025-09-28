@@ -103,9 +103,6 @@ public final class RecipeJsonUtil {
         RECIPE_CONVERSION_MAP.put("farm_and_charm:crafting_bowl", List.of(
                 new Tuple<>("create", RecipeJsonUtil.generateCreateMixerFromFDBowl)
         ));
-        RECIPE_CONVERSION_MAP.put("farm_and_charm:mincer", List.of(
-                new Tuple<>("create", RecipeJsonUtil.generateCreateMillingFromFDMincer)
-        ));
     }
 
     public interface RecipeConvertor {
