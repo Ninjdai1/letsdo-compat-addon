@@ -2,4 +2,5 @@
 `1.21.1` `Fabric & Forge`
 ### Changelog:
 
-Updated to 1.21.1 and farm&charm 1.1.6
+Added:
+* `c:foods/leafy_green` tag for better farmer's delight compat
